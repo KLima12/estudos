@@ -1,0 +1,51 @@
+# Crie um arquivo chamado 'videos.txt' ou qualquer nome. Com os nomes dos arquivos a serem unidos. 
+
+# Tem que ficar assim: 
+# file 'video1.mp4'
+# file 'video2.mp4'
+
+#   Use este comando: 
+
+#  ffmpeg -f concat -safe 0 -i videos.txt -c copy output.mp4
+
+# -f concat: Especifica que os vídeos serão concatenados.
+# -c copy: Copia os streams sem reencode. 
+
+
+-----------------------------------------------------------------
+
+
+
+
+# Alguns problemas
+
+# Para juntar os vídeos, verifique se eles têm características iguais. Use o comando abaixo para analisar os detalhes dos vídeos.
+
+# ffmpeg -i video.mp4
+
+# Preste atenção nos seguintes pontos:
+
+# Codec de vídeo (ex.: H.264).
+# Codec de áudio (ex.: AAC).
+# Resolução (ex.: 1920x1080).
+# Taxa de quadros (ex.: 30 fps).
+
+# Ajuste os vídeos para ter configurações iguais
+
+# Redimensionar para a mesma resolução: 
+
+# ffmpeg -i video1.mp4 -vf scale=1280:720 video1_resized.mp4
+
+# Percebendo que vídeo estava desigual a outro video, fiz essas mudanças: 
+
+# ffmpeg -i video2.mp4 -vf scale=1280:720,fps=23.98 -c:v libx264 -profile:v main -c:a aac -profile:a aac_low -b:a 192k video2_alterado.mp4
+
+            # Explicação
+# -profile:v main: Define o perfil do vídeo como Main (para H.264).
+
+# '-profile: a aac_low':  Define o perfil do áudio como AAC LC (Low Complexity).
+
+# '-b:a 192k': Define a taxa de bits do áudio para 192 kbps.'
+
+# ----------------------------------------------------------------------
+Agora, que você modificou ambos os videos ou somente um video, você pode fazer o mesmo processo pra juntar eles. Vá novamente no arquivo de videos.txt e coloque o novo nome deles. 

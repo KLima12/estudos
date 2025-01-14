@@ -1,0 +1,7 @@
+# Alterar resolução do vídeo
+
+# ffmpeg -i video.mp4 -vf scale=1280:720 video_720p.mp4
+
+#       Explicação
+
+# -Vf scale redimensiona o vídeo para o formato que você quer.

@@ -1,0 +1,4 @@
+# Conversão do vídeo mp4 em avi
+
+# ffmpeg -i (nome do arquivo entrada) (nome do arquivo saída)
+# ffmpeg -i video.mp4 video.avi

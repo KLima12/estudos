@@ -1,0 +1,3 @@
+# Extraindo somente o áudio do vídeo
+
+# ffmpeg -i video.mp4 audio.mp3

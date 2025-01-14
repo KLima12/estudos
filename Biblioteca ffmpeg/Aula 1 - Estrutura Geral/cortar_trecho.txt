@@ -1,0 +1,10 @@
+# Cortando trecho especifico do vídeo;
+
+# ffmpeg -i video.mp4 -ss 00:00:00 -t 00:01:00 output.mp4
+
+#       Explicação 
+
+# --ss 00:00:00: Começa a partir de 0 segundos ou (00:01:00) )(Começa a partir de 1 minuto.)
+
+# -t 00:01:00 Corta até 1 minuto a partir do ponto definido. Pode tbm ser (00:00:10)
+
